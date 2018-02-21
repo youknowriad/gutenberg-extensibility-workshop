@@ -13,3 +13,4 @@ require_once dirname( __FILE__ ) . '/lib/03-advanced-static-block.php';
 require_once dirname( __FILE__ ) . '/lib/04-dynamic-block.php';
 require_once dirname( __FILE__ ) . '/lib/05-meta-block.php';
 // require_once dirname( __FILE__ ) . '/lib/06-remove-blocks-black-list.php';
+// require_once dirname( __FILE__ ) . '/lib/07-remove-blocks-black-list.php';
