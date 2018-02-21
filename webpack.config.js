@@ -34,7 +34,8 @@ const entryPointNames = [
   "02-static-block",
   "03-advanced-static-block",
   "04-dynamic-block",
-  "05-meta-block"
+  "05-meta-block",
+  "06-remove-blocks-black-list"
 ];
 
 const externals = {};
