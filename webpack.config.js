@@ -33,7 +33,8 @@ const entryPointNames = [
   "01-intro-block",
   "02-static-block",
   "03-advanced-static-block",
-  "04-dynamic-block"
+  "04-dynamic-block",
+  "05-meta-block"
 ];
 
 const externals = {};

@@ -26,16 +26,10 @@ registerBlockType("gew/dynamic-block", {
         {post && <a href={post.link}>{post.title.rendered}</a>}
       </div>
     );
-
-    return el(
-      "a",
-      { className: className, href: post.link },
-      post.title.rendered
-    );
   }),
 
   // Save returns null, because the rendering happens on the backend.
-  // We can use it to add fallback content in case the block is disabled
+  // We can use it to add fallback content in case the block is disabled.
   save() {
     return null;
   }

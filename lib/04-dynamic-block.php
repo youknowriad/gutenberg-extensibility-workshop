@@ -22,7 +22,7 @@ function register_04_dynamic_block() {
 	wp_register_script(
 			'gew-04-dynamic-block',
 			gew_url( 'scripts/04-dynamic-block/build/index.js', __FILE__ ),
-			array( 'wp-blocks', 'wp-element' )
+			array( 'wp-blocks', 'wp-element', 'wp-components' )
 	);
 
 	// Register the block style sheet

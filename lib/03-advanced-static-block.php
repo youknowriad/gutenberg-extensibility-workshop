@@ -4,7 +4,7 @@ function register_03_advanced_static_block() {
 	wp_register_script(
 			'gew-03-advanced-static-block',
 			gew_url( 'scripts/03-advanced-static-block/build/index.js', __FILE__ ),
-			array( 'wp-blocks', 'wp-element' )
+			array( 'wp-blocks', 'wp-element', 'wp-components' )
 	);
 
 	// Register the block style sheet
