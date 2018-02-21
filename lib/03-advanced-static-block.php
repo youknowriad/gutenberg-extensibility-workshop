@@ -16,7 +16,7 @@ function register_03_advanced_static_block() {
 
 	register_block_type( 'gew/advanced-static-block', array(
 			'editor_script' => 'gew-03-advanced-static-block',
-			'editor_style'  => 'gew-03-advanced-static-block',
+			'style'  => 'gew-03-advanced-static-block',
 	) );
 }
 

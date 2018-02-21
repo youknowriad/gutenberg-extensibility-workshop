@@ -18,7 +18,9 @@ function register_02_static_block() {
 			'editor_script' => 'gew-02-static-block',
 
 			// Attach the style to the block
-			'editor_style'  => 'gew-02-static-block',
+			// Using style loads the styles in both frontend and backend
+			// You can use editor_style to only load the style in the backend.
+			'style'  => 'gew-02-static-block',
 	) );
 }
 
