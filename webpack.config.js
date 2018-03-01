@@ -37,7 +37,8 @@ const entryPointNames = [
   "05-meta-block",
   "06-remove-blocks-black-list",
   "07-remove-blocks-white-list",
-  "08-extend-block"
+  "08-extend-block",
+  "09-sidebar-plugin"
 ];
 
 const externals = {};
@@ -47,7 +48,14 @@ entryPointNames.forEach(entryPointName => {
   };
 });
 
-const wpDependencies = ["components", "element", "blocks", "hooks"];
+const wpDependencies = [
+  "components",
+  "element",
+  "blocks",
+  "hooks",
+  "data",
+  "editPost"
+];
 wpDependencies.forEach(wpDependency => {
   externals["@wordpress/" + wpDependency] = {
     this: ["wp", wpDependency]

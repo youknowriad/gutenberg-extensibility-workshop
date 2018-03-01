@@ -15,3 +15,4 @@ require_once dirname( __FILE__ ) . '/lib/05-meta-block.php';
 // require_once dirname( __FILE__ ) . '/lib/06-remove-blocks-black-list.php';
 // require_once dirname( __FILE__ ) . '/lib/07-remove-blocks-black-list.php';
 require_once dirname( __FILE__ ) . '/lib/08-extend-block.php';
+require_once dirname( __FILE__ ) . '/lib/09-sidebar-plugin.php';
