@@ -13,6 +13,10 @@ body {
   margin: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /*
  * Typographie
  */
@@ -47,7 +51,6 @@ a:hover {
 }
 
 #main {
-  max-width: 700px;
   margin: auto;
 }
 
@@ -65,6 +68,10 @@ a:hover {
 }
 .entry-title a {
   text-decoration: none;
+}
+
+.entry-content img {
+  width: 100%;
 }
 
 /*
@@ -88,4 +95,22 @@ a:hover {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.entry-title,
+.entry-content > *:not(.alignwide):not(.alignfull) {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alignwide {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alignfull {
+  margin-right: -20px;
+  margin-left: -20px;
 }
