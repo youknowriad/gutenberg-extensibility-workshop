@@ -1,0 +1,91 @@
+/*
+Theme Name: gutenberg-extensibility-workshop
+Version: 1.0.0
+License: GNU General Public License v2 or later
+*/
+
+/*
+ * Reset
+ */
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/*
+ * Typographie
+ */
+body {
+  font-family: "Noto Serif", serif;
+}
+
+a {
+  color: #334499;
+}
+a:hover {
+  text-decoration: none;
+}
+
+/*
+ * Layout
+ */
+#header {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+}
+
+#logo {
+  max-width: 700px;
+  margin: auto;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+#content {
+  padding: 20px;
+}
+
+#main {
+  max-width: 700px;
+  margin: auto;
+}
+
+.site-footer {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 12px;
+}
+
+.entry-title {
+  font-weight: 500;
+  font-size: 25px;
+  color: #334499;
+}
+.entry-title a {
+  text-decoration: none;
+}
+
+/*
+ * Alignments
+ */
+
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
