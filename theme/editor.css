@@ -1,0 +1,19 @@
+/*
+ * Typographie
+ */
+.edit-post-visual-editor {
+  font-family: "Noto Serif", serif;
+}
+
+.edit-post-visual-editor a {
+  color: #334499;
+}
+.edit-post-visual-editor a:hover {
+  text-decoration: none;
+}
+
+.editor-post-title textarea.editor-post-title__input {
+  font-weight: 500;
+  font-size: 25px;
+  color: #334499;
+}

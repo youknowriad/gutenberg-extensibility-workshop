@@ -1,0 +1,14 @@
+/*
+ * Blocks
+ */
+.wp-block-quote {
+  background: #f1f1f1;
+  margin: 0;
+  padding: 20px;
+}
+.wp-block-quote:not(.is-large) {
+  border: none;
+}
+.wp-block-quote p:first-child {
+  margin-top: 0;
+}
