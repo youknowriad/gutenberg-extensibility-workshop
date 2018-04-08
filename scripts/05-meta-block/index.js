@@ -7,7 +7,7 @@ import { registerBlockType, PlainText } from "@wordpress/blocks";
 import { withInstanceId } from "@wordpress/components";
 
 registerBlockType("gew/meta-block", {
-  title: "04 - Meta Block",
+  title: "05 - Meta Block",
   icon: "welcome-learn-more",
   category: "common",
 
