@@ -1,6 +1,6 @@
 # Gutenberg Extensibility Workshop
 
-This repoository contains examples of Gutenberg Extensibility Patterns. It's organized as a WordPress plugin you can install and activate to play with the different patterns exposed.
+This repository contains examples of Gutenberg Extensibility Patterns. It's organized as a WordPress plugin you can install and activate to play with the different patterns exposed.
 
 ## Plugin Extensibility Patterns (ES6)
 
