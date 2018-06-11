@@ -54,7 +54,9 @@ const wpDependencies = [
   "blocks",
   "hooks",
   "data",
-  "editPost"
+  "editPost",
+  "editor",
+  "plugins"
 ];
 wpDependencies.forEach(wpDependency => {
   externals["@wordpress/" + wpDependency] = {

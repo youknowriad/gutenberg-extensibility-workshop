@@ -2,8 +2,8 @@ import { get } from "lodash";
 
 import { registerBlockType } from "@wordpress/blocks";
 
-// Higher Order Component to make API requests
-import { withAPIData } from "@wordpress/components";
+// Select Data from the Data module
+import { withSelect } from "@wordpress/data";
 
 import "./style.scss";
 
@@ -12,17 +12,17 @@ registerBlockType("gew/dynamic-block", {
   icon: "welcome-learn-more",
   category: "common",
 
-  edit: withAPIData(() => {
+  edit: withSelect(select => {
     return {
-      posts: "/wp/v2/posts?per_page=1"
+      posts: select("core").getEntityRecords("postType", "post")
     };
   })(({ className, posts }) => {
-    const post = get(posts.data, [0]);
+    const post = get(posts, [0]);
 
     return (
       <div className={className}>
-        {!posts.data && "loading"}
-        {posts.data && !post && "No poosts"}
+        {!post && "loading"}
+        {!post && "No posts"}
         {post && <a href={post.link}>{post.title.rendered}</a>}
       </div>
     );

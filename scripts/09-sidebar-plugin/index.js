@@ -1,7 +1,7 @@
 import { uniq } from "lodash";
 
 // Function to register and active a sidebar
-import { registerSidebar, activateSidebar } from "@wordpress/editPost";
+import { registerPlugin } from "@wordpress/plugins";
 
 // Higher Order Component used to extract data from the data store
 import { withSelect } from "@wordpress/data";
@@ -9,7 +9,19 @@ import { withSelect } from "@wordpress/data";
 // Function used to get informations about a block type
 import { getBlockType } from "@wordpress/blocks";
 
+// Slots to use
+import { PluginSidebarMoreMenuItem, PluginSidebar } from "@wordpress/editPost";
+
+import { Fragment } from "@wordpress/element";
+
 import "./style.scss";
+
+// Component showing the menu item
+const BlockTypesMoreMenuItem = () => (
+  <PluginSidebarMoreMenuItem target="gew-sidebar" icon="smiley">
+    Used Block Types
+  </PluginSidebarMoreMenuItem>
+);
 
 // Component showing my sidebar
 const BlockTypesSidebar = withSelect(select => ({
@@ -18,23 +30,34 @@ const BlockTypesSidebar = withSelect(select => ({
   const blockTypes = uniq(blocks.map(block => block.name)).map(getBlockType);
 
   return (
-    <div className="gew-sidebar">
-      Your post is using <strong>{blockTypes.length}</strong> different block
-      types.
-      <ul>
-        {blockTypes.map(blockType => (
-          <li key={blockType.name}>{blockType.title}</li>
-        ))}
-      </ul>
-    </div>
+    <PluginSidebar
+      name="gew-sidebar"
+      title="My block Types sidebar"
+      icon="smiley"
+    >
+      <div className="gew-sidebar">
+        Your post is using <strong>{blockTypes.length}</strong> different block
+        types.
+        <ul>
+          {blockTypes.map(blockType => (
+            <li key={blockType.name}>{blockType.title}</li>
+          ))}
+        </ul>
+      </div>
+    </PluginSidebar>
   );
 });
 
-// Registers a new sidebar with a name and a title
-registerSidebar("gew/block-types-sidebar", {
-  title: "Block Types",
-  render: () => <BlockTypesSidebar />
-});
+function BlockTypesPlugin() {
+  return (
+    <Fragment>
+      <BlockTypesMoreMenuItem />
+      <BlockTypesSidebar />
+    </Fragment>
+  );
+}
 
-// Activates the sidebar
-// wp.editPost.activateSidebar("gew/block-types-sidebar");
+// Registers a new sidebar with a name and a title
+registerPlugin("gew-block-types-sidebar", {
+  render: () => <BlockTypesPlugin />
+});

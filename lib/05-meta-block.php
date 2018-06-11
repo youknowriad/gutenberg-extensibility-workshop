@@ -4,7 +4,7 @@ function register_05_meta_block() {
 	wp_register_script(
 			'gew-05-meta-block',
 			gew_url( 'scripts/05-meta-block/build/index.js', __FILE__ ),
-			array( 'wp-blocks', 'wp-element', 'wp-components' )
+			array( 'wp-blocks', 'wp-element', 'wp-components', 'wp-editor' )
 	);
 
 	wp_register_style(
