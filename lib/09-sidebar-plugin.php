@@ -4,7 +4,7 @@ function enqueue_09_sidebar_plugin_script() {
 	wp_register_script(
 			'gew-09-sidebar-plugin',
 			gew_url( 'scripts/09-sidebar-plugin/build/index.js', __FILE__ ),
-			array( 'wp-blocks', 'wp-data', 'wp-edit-post' ),
+			array( 'wp-blocks', 'wp-data', 'wp-plugins', 'wp-edit-post' ),
 			null,
 			true
 	);

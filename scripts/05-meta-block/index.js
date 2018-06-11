@@ -1,7 +1,8 @@
 import { get } from "lodash";
 
 import "./style.scss";
-import { registerBlockType, PlainText } from "@wordpress/blocks";
+import { registerBlockType } from "@wordpress/blocks";
+import { PlainText } from "@wordpress/editor";
 
 // Higher Order Component used to generate unique id per component instance
 import { withInstanceId } from "@wordpress/components";

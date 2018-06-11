@@ -1,9 +1,9 @@
+import { registerBlockType } from "@wordpress/blocks";
 import {
-  registerBlockType,
   RichText, // RichText is for Formatted content Editable areas (its value is an array)
   PlainText, // PlainText is for Formatted content Editable areas (its value is a string)
   InspectorControls // Used to show controls in the block inspector
-} from "@wordpress/blocks";
+} from "@wordpress/editor";
 
 // Just a way to wrap elements without producing any wrapper markup
 import { Fragment } from "@wordpress/element";
