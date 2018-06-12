@@ -3,14 +3,16 @@
 function register_02_static_block() {
 	wp_register_script(
 			'gew-02-static-block',
-			gew_url( 'scripts/02-static-block/build/index.js', __FILE__ ),
+			gew_url( 'scripts/02-static-block/index.es5.js', __FILE__ ),
 			array( 'wp-blocks', 'wp-element' )
 	);
 
 	// Register the block style sheet
 	wp_register_style(
 		'gew-02-static-block',
-		gew_url( 'scripts/02-static-block/build/style.css', __FILE__ ),
+		// Change to the built file if you're using SASS
+		gew_url( 'scripts/02-static-block/style.css', __FILE__ ),
+		// gew_url( 'scripts/02-static-block/build/style.css', __FILE__ ),
 		array()
 	);
 
