@@ -37,7 +37,7 @@ registerBlockType("gew/advanced-static-block", {
     }
   },
 
-  edit({ className, attributes, setAttributes, isSelected }) {
+  edit({ className, attributes, setAttributes }) {
     const { type, message, submessage } = attributes;
 
     const updateMessage = message => setAttributes({ message });
@@ -51,7 +51,6 @@ registerBlockType("gew/advanced-static-block", {
             className="message"
             value={message}
             onChange={updateMessage}
-            isSelected={isSelected}
             placeholder="Write a message"
           />
           <PlainText
