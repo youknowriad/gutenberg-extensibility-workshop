@@ -22,7 +22,6 @@ registerBlockType("gew/dynamic-block", {
     return (
       <div className={className}>
         {!post && "loading"}
-        {!post && "No posts"}
         {post && <a href={post.link}>{post.title.rendered}</a>}
       </div>
     );
