@@ -7,8 +7,10 @@ This repository contains examples of Gutenberg Extensibility Patterns. It's orga
 It's composed of a sequential list of patterns you can enable one by one. Each pattern is organized like this:
 
 * A php file in `lib/XX-pattern-name.php` to enqueue the different scripts/stylesheets required for this pattern.
-* A folder in `scripts/XX-pattern-name` containing the JavaScript files and SASS stylesheets required for the pattern.
+* A folder in `scripts/XX-pattern-name` containing the JavaScript files and CSS and SASS stylesheets required for the pattern.
+* Each example is implemented in `ES5` + `CSS` without requiring any built step but examples also include an `ESnext` + `SASS` equivalement implementation.
 * Running the build process ( `npm run build` ) generates a JavaScript bundle file `scripts/XX-pattern-name/build/index.js` and a stylesheet file `scripts/XX-pattern-name/build/style.css` if needed.
+* By default the plugin loads the `ES5` + `CSS` version of each example, make sure to update the URL of the stylesheets/scripts used in the `lib/XX-pattern-name.php` file if you want to switch to the built versions.
 
 ### Usage
 

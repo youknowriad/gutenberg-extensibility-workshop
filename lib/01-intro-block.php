@@ -4,7 +4,9 @@ function register_01_intro_block() {
 	// Register the block script
 	wp_register_script(
 			'gew-01-intro-block',
-			gew_url( 'scripts/01-intro-block/build/index.js', __FILE__ ),
+			// Change with the built files if you're using ESnext
+			gew_url( 'scripts/01-intro-block/index.es5.js', __FILE__ ),
+			//gew_url( 'scripts/01-intro-block/build/index.js', __FILE__ ),
 			array( 'wp-blocks', 'wp-element' )
 	);
 

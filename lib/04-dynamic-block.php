@@ -21,14 +21,14 @@ function render_04_dynamic_block( $attribites ) {
 function register_04_dynamic_block() {
 	wp_register_script(
 			'gew-04-dynamic-block',
-			gew_url( 'scripts/04-dynamic-block/build/index.js', __FILE__ ),
+			gew_url( 'scripts/04-dynamic-block/index.es5.js', __FILE__ ),
 			array( 'wp-blocks', 'wp-element', 'wp-core-data', 'wp-data' )
 	);
 
 	// Register the block style sheet
 	wp_register_style(
 		'gew-04-dynamic-block',
-		gew_url( 'scripts/04-dynamic-block/build/style.css', __FILE__ ),
+		gew_url( 'scripts/04-dynamic-block/style.css', __FILE__ ),
 		array()
 	);
 
