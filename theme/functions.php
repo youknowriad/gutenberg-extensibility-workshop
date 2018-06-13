@@ -28,10 +28,22 @@ function mytheme_setup_theme_supported_features() {
 
 	// Define a palette
 	add_theme_support( 'editor-color-palette',
-			'#334499',
-			'#d0a5db',
-			'#eee',
-			'#444'
+		array(
+			'name' => 'deep blue', // theme should define has-deep-blue-background-color and has-deep-blue-color
+			'color' => '#334499',
+		),
+		array(
+			'name' => 'light gray-magenta',
+			'color' => '#d0a5db',
+		),
+		array(
+			'name' => 'light gray',
+			'color' => '#eee',
+		),
+		array(
+			'name' => 'dark gray',
+			'color' => '#444',
+		)
 	);
 
 	// Supports wide alignments
