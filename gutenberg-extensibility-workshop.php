@@ -7,6 +7,7 @@
  */
 
 require_once dirname( __FILE__ ) . '/lib/common.php';
+require_once dirname( __FILE__ ) . '/lib/00-playground.php';
 require_once dirname( __FILE__ ) . '/lib/01-intro-block.php';
 require_once dirname( __FILE__ ) . '/lib/02-static-block.php';
 require_once dirname( __FILE__ ) . '/lib/03-advanced-static-block.php';
