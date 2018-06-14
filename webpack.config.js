@@ -36,7 +36,7 @@ const entryPointNames = [
   "04-dynamic-block",
   "05-meta-block",
 
-  "08-extend-block",
+  "10-extend-block",
   "09-sidebar-plugin"
 ];
 
