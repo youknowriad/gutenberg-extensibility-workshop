@@ -10,7 +10,7 @@ registerBlockType("gew/static-block", {
   attributes: {
     type: {
       type: "string",
-      default: "danger"
+      default: "default"
     },
     message: {
       type: "string",
