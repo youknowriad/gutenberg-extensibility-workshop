@@ -1,14 +1,18 @@
 var el = wp.element.createElement;
 var Fragment = wp.element.Fragment;
-var __ = wp.i18n.__;
 var registerPlugin = wp.plugins.registerPlugin;
+// Special component which allows to render your content before any post gets published
 var PluginPostPublishPanel = wp.editPost.PluginPostPublishPanel;
+// Special component which allows to render your content after any post gets published
+
 var PluginPrePublishPanel = wp.editPost.PluginPrePublishPanel;
 
+// Component which can be reused to render the body of the panels
 function PanelContent() {
-  return el("p", {}, __("Here is the panel content!"));
+  return el("p", {}, "Here is the panel content!");
 }
 
+// Plugin's representation
 function MyPublishPanelPlugin() {
   return el(
     Fragment,
@@ -16,22 +20,22 @@ function MyPublishPanelPlugin() {
     el(
       PluginPrePublishPanel,
       {
-        className: "my-publish-panel-plugin__pre",
-        title: __("My pre publish panel")
+        className: "gew-publish-panel-plugin__pre",
+        title: "My pre publish panel"
       },
       el(PanelContent, {})
     ),
     el(
       PluginPostPublishPanel,
       {
-        className: "my-publish-panel-plugin__post",
-        title: __("My post publish panel")
+        className: "gew-publish-panel-plugin__post",
+        title: "My post publish panel"
       },
       el(PanelContent, {})
     )
   );
 }
 
-registerPlugin("my-publish-panel-plugin", {
+registerPlugin("gew-publish-panel-plugin", {
   render: MyPublishPanelPlugin
 });
