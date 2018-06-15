@@ -2,9 +2,9 @@
 
 function register_02_static_block() {
 	wp_register_script(
-			'gew-02-static-block',
-			gew_url( 'scripts/02-static-block/index.es5.js', __FILE__ ),
-			array( 'wp-blocks', 'wp-element' )
+		'gew-02-static-block',
+		gew_url( 'scripts/02-static-block/index.es5.js', __FILE__ ),
+		array( 'wp-blocks', 'wp-element' )
 	);
 
 	// Register the block style sheet
@@ -17,12 +17,12 @@ function register_02_static_block() {
 	);
 
 	register_block_type( 'gew/static-block', array(
-			'editor_script' => 'gew-02-static-block',
+		'editor_script' => 'gew-02-static-block',
 
-			// Attach the style to the block
-			// Using style loads the styles in both frontend and backend
-			// You can use editor_style to only load the style in the backend.
-			'style'  => 'gew-02-static-block',
+		// Attach the style to the block
+		// Using style loads the styles in both frontend and backend
+		// You can use editor_style to only load the style in the backend.
+		'style'  => 'gew-02-static-block',
 	) );
 }
 

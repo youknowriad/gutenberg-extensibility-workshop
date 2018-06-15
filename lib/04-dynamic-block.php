@@ -20,9 +20,9 @@ function render_04_dynamic_block( $attribites ) {
 
 function register_04_dynamic_block() {
 	wp_register_script(
-			'gew-04-dynamic-block',
-			gew_url( 'scripts/04-dynamic-block/index.es5.js', __FILE__ ),
-			array( 'wp-blocks', 'wp-element', 'wp-core-data', 'wp-data' )
+		'gew-04-dynamic-block',
+		gew_url( 'scripts/04-dynamic-block/index.es5.js', __FILE__ ),
+		array( 'wp-blocks', 'wp-element', 'wp-core-data', 'wp-data' )
 	);
 
 	// Register the block style sheet
@@ -33,11 +33,11 @@ function register_04_dynamic_block() {
 	);
 
 	register_block_type( 'gew/dynamic-block', array(
-			'editor_script' => 'gew-04-dynamic-block',
-			'style'  => 'gew-04-dynamic-block',
+		'editor_script' => 'gew-04-dynamic-block',
+		'style'  => 'gew-04-dynamic-block',
 
-			// Rendering the block happens on the server (similar to shortcodes).
-			'render_callback' => 'render_04_dynamic_block',
+		// Rendering the block happens on the server (similar to shortcodes).
+		'render_callback' => 'render_04_dynamic_block',
 	) );
 }
 
