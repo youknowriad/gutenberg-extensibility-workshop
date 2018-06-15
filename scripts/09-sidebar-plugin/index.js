@@ -14,7 +14,7 @@ import { PluginSidebarMoreMenuItem, PluginSidebar } from "@wordpress/editPost";
 
 import { Fragment } from "@wordpress/element";
 
-import "./style.scss";
+import "./style.css";
 
 // Component showing the menu item
 const BlockTypesMoreMenuItem = () => (
