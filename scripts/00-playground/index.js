@@ -32,7 +32,7 @@ registerBlockType("gew/playground", {
 // Plugins
 var registerPlugin = wp.plugins.registerPlugin;
 
-registerPlugin( "gew-playground", {
+registerPlugin("gew-playground", {
   // Icon of the block dashicon string (https://developer.wordpress.org/resource/dashicons) or custom svg element.
   icon: "welcome-learn-more",
 
