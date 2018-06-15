@@ -13,7 +13,7 @@ function enqueue_09_sidebar_plugin_script() {
 
 	wp_register_style(
 		'gew-09-sidebar-plugin',
-		gew_url( 'scripts/09-sidebar-plugin/build/style.css', __FILE__ ),
+		gew_url( 'scripts/09-sidebar-plugin/style.css', __FILE__ ),
 		array()
 	);
 
