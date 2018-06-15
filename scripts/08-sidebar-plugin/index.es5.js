@@ -6,13 +6,13 @@ var withSelect = wp.data.withSelect;
 var Fragment = wp.element.Fragment;
 var compose = wp.element.compose;
 var el = wp.element.createElement;
-var __ = wp.i18n.__;
 var registerPlugin = wp.plugins.registerPlugin;
 var PluginSidebar = wp.editPost.PluginSidebar;
 var PluginSidebarMoreMenuItem = wp.editPost.PluginSidebarMoreMenuItem;
 
+// A component which renders the inner part of the sidebar
 function SidebarContents(props) {
-  var noTitle = el("em", {}, __("(No title)"));
+  var noTitle = el("em", {}, "(No title)");
   return el(
     PanelBody,
     {},
@@ -20,11 +20,12 @@ function SidebarContents(props) {
     el(
       PanelRow,
       {},
-      el(Button, { isPrimary: true, onClick: props.onReset }, __("Reset"))
+      el(Button, { isPrimary: true, onClick: props.onReset },"Reset")
     )
   );
 }
 
+// The way to wrap UI component with the wrapper components which add additional logic
 var SidebarContentsWithDataHandling = compose([
   withSelect(function(select) {
     return {
@@ -42,6 +43,7 @@ var SidebarContentsWithDataHandling = compose([
   })
 ])(SidebarContents);
 
+// Plugin's representation
 function MyTitlePlugin() {
   return el(
     Fragment,
@@ -49,7 +51,7 @@ function MyTitlePlugin() {
     el(
       PluginSidebar,
       {
-        name: "my-title-sidebar",
+        name: "gew-title-sidebar",
         title: "My title plugin"
       },
       el(SidebarContentsWithDataHandling, {})
@@ -57,14 +59,15 @@ function MyTitlePlugin() {
     el(
       PluginSidebarMoreMenuItem,
       {
-        target: "my-title-sidebar"
+        target: "gew-title-sidebar"
       },
-      __("My title plugin")
+      "My title plugin"
     )
   );
 }
 
-registerPlugin("my-title-plugin", {
+registerPlugin("gew-title-plugin", {
+  // Icon which is going to be rendered in the More Menu and when the sidebar is pinned to the Header
   icon: "welcome-write-blog",
   render: MyTitlePlugin
 });

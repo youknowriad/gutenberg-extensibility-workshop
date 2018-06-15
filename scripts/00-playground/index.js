@@ -1,3 +1,4 @@
+// Blocks
 var registerBlockType = wp.blocks.registerBlockType;
 var el = wp.element.createElement;
 
@@ -28,8 +29,14 @@ registerBlockType("gew/playground", {
   }
 });
 
+// Plugins
 var registerPlugin = wp.plugins.registerPlugin;
-registerPlugin("gew/playground", {
+
+registerPlugin( "gew-playground", {
+  // Icon of the block dashicon string (https://developer.wordpress.org/resource/dashicons) or custom svg element.
+  icon: "welcome-learn-more",
+
+  // Plugin's representation
   render: function() {
     return null;
   }

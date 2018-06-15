@@ -1,7 +1,7 @@
 <?php
 
 wp_enqueue_script(
-	'gutenberg-test-plugins-api-sidebar',
+	'gew-08-sidebar-plugin',
 	gew_url( 'scripts/08-sidebar-plugin/index.es5.js', __FILE__ ),
 	array(
 		'wp-components',
@@ -9,7 +9,6 @@ wp_enqueue_script(
 		'wp-edit-post',
 		'wp-editor',
 		'wp-element',
-		'wp-i18n',
 		'wp-plugins',
 	)
 );
