@@ -1,7 +1,7 @@
 <?php
 
 // Rendering callback: This function receives the block comment attributes as an argument.
-function render_04_dynamic_block( $attribites ) {
+function render_04_dynamic_block( $attributes ) {
 	$recent_posts = wp_get_recent_posts( array(
 		'numberposts' => 1,
 		'post_status' => 'publish',
