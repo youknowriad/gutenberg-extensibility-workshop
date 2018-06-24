@@ -11,8 +11,6 @@ import { Fragment } from "@wordpress/element";
 // Components contain several reusable React components
 import { SelectControl } from "@wordpress/components";
 
-import { isSelected } from "@wordpress/editPost";
-
 import "./style.scss";
 
 registerBlockType("gew/advanced-static-block", {
@@ -39,7 +37,7 @@ registerBlockType("gew/advanced-static-block", {
     }
   },
 
-  edit({ className, attributes, setAttributes }) {
+  edit({ attributes, setAttributes, isSelected, className }) {
     const { type, message, submessage } = attributes;
 
     const updateMessage = message => setAttributes({ message });
