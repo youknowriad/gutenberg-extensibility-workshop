@@ -11,6 +11,8 @@ import { Fragment } from "@wordpress/element";
 // Components contain several reusable React components
 import { SelectControl } from "@wordpress/components";
 
+import { isSelected } from "@wordpress/editPost";
+
 import "./style.scss";
 
 registerBlockType("gew/advanced-static-block", {
