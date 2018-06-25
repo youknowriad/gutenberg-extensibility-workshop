@@ -37,7 +37,7 @@ registerBlockType("gew/advanced-static-block", {
     }
   },
 
-  edit({ className, attributes, setAttributes }) {
+  edit({ attributes, setAttributes, className }) {
     const { type, message, submessage } = attributes;
 
     const updateMessage = message => setAttributes({ message });
@@ -60,22 +60,19 @@ registerBlockType("gew/advanced-static-block", {
             placeholder="Write a caption"
           />
         </div>
-
-        {isSelected && (
-          <InspectorControls>
-            <SelectControl
-              label="Message Type"
-              value={type}
-              options={[
-                { label: "Default", value: "default" },
-                { label: "Danger", value: "danger" },
-                { label: "Warning", value: "warning" },
-                { label: "Success", value: "success" }
-              ]}
-              onChange={updateType}
-            />
-          </InspectorControls>
-        )}
+        <InspectorControls>
+          <SelectControl
+            label="Message Type"
+            value={type}
+            options={[
+              { label: "Default", value: "default" },
+              { label: "Danger", value: "danger" },
+              { label: "Warning", value: "warning" },
+              { label: "Success", value: "success" }
+            ]}
+            onChange={updateType}
+          />
+        </InspectorControls>
       </Fragment>
     );
   },
