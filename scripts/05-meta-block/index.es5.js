@@ -5,7 +5,7 @@ var registerBlockType = wp.blocks.registerBlockType;
 var PlainText = wp.editor.PlainText;
 
 // Higher Order Component used to generate unique id per component instance
-var withInstanceId = wp.components.withInstanceId;
+var withInstanceId = wp.compose.withInstanceId;
 
 registerBlockType("gew/meta-block", {
   title: "05 - Meta Block",
